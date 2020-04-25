@@ -16,8 +16,7 @@ import android.widget.RelativeLayout;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import ai.fritz.core.Fritz;
-import ai.fritz.poseestimationdemo.R;
-import ai.fritz.poseestimationdemo.home_activity;
+import ai.fritz.telepathActivities.R;
 import ai.fritz.vision.FritzVision;
 import ai.fritz.vision.FritzVisionImage;
 import ai.fritz.vision.FritzVisionOrientation;
@@ -76,7 +75,10 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
     protected Size getDesiredPreviewFrameSize() {
         return DESIRED_PREVIEW_SIZE;
     }
-
+    private void goHome(){
+        Intent intent = new Intent(this, ai.fritz.telepathActivities.home_activity.class);
+        startActivity(intent);
+    }
     @Override
     public void onPreviewSizeChosen(final Size previewSize, final Size cameraViewSize, final int rotation) {
         orientation = FritzVisionOrientation.getImageOrientationFromCamera(this, cameraId);
@@ -88,8 +90,7 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
         snapshotButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(this, home_activity.class);
-                startActivity(intent);
+               goHome();
             }
         });
         setCallback(canvas -> {

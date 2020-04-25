@@ -20,7 +20,7 @@ import android.view.KeyEvent;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import ai.fritz.poseestimationdemo.R;
+import ai.fritz.telepathActivities.R;
 
 
 public abstract class BaseCameraActivity extends AppCompatActivity implements OnImageAvailableListener {

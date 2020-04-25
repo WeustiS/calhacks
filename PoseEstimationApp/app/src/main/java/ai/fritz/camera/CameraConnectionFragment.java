@@ -43,7 +43,7 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-import ai.fritz.poseestimationdemo.R;
+import ai.fritz.telepathActivities.R;
 
 
 public class CameraConnectionFragment extends Fragment {

@@ -15,7 +15,7 @@
 	 */
 	
 
-package ai.fritz.poseestimationdemo;
+package ai.fritz.telepathActivities;
 
     import android.app.Activity;
     import android.content.Intent;
