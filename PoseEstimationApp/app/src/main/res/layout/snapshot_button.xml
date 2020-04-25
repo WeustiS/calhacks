@@ -3,15 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    android:layout_marginTop="@dimen/margin_sm"
-    android:layout_marginBottom="@dimen/margin_lg">
+    android:layout_marginTop="48dp"
+    android:layout_marginBottom="32dp">
 
     <Button
         android:id="@+id/take_picture_btn"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_centerInParent="true"
-        android:background="@drawable/round_button"
+        android:background="@drawable/icon_awesome_phone_slash"
         android:onClick="goHome"
         android:textColor="#fff" />
 

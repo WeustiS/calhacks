@@ -13,13 +13,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true" />
+
         <ai.fritz.camera.OverlayView
             android:id="@+id/debug_overlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"/>
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-20dp" />
+
+        <include layout="@layout/snapshot_button" />
     </RelativeLayout>
 
-    <include layout="@layout/snapshot_button" />
-    <include layout="@layout/snapshot_overlay_frame" />
 </RelativeLayout>

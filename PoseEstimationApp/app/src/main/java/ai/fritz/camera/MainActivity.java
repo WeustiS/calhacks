@@ -102,43 +102,8 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
             isComputing.set(false);
         });
 
-        // Snapshot View
-        snapshotFrame = findViewById(R.id.snapshot_frame);
-        snapshotOverlay = findViewById(R.id.snapshot_view);
-        snapshotOverlay.setCallback(
-                canvas -> {
-                    if (poseResult != null) {
-                        Bitmap bitmap = visionImage.overlaySkeletons(poseResult.getPoses());
-                        canvas.drawBitmap(bitmap, null, new RectF(0, 0, cameraViewSize.getWidth(), cameraViewSize.getHeight()), null);
-                    }
-                });
 
-        recordSpinner = findViewById(R.id.record_spinner);
-        recordButton = findViewById(R.id.record_prediction_btn);
-        recordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                recordSpinner.setVisibility(View.VISIBLE);
-                // To record predictions and send data back to Fritz AI via the Data Collection System, use the predictors's record method.
-                // In addition to the input image, predicted model results can be collected as well as user-modified annotations.
-                // This allows developers to both gather data on model performance and have users collect additional ground truth data for future model retraining.
-                // Note, the Data Collection System is only available on paid plans.
-                predictor.record(visionImage, poseResult, null, () -> {
-                    switchPreviewView();
-                    return null;
-                }, () -> {
-                    switchPreviewView();
-                    return null;
-                });
-            }
-        });
-        closeButton = findViewById(R.id.close_btn);
-        closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switchPreviewView();
-            }
-        });
+
 
     }
 
