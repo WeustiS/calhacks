@@ -1,5 +1,6 @@
 package ai.fritz.camera;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 import android.media.Image;
@@ -16,6 +17,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import ai.fritz.core.Fritz;
 import ai.fritz.poseestimationdemo.R;
+import ai.fritz.poseestimationdemo.home_activity;
 import ai.fritz.vision.FritzVision;
 import ai.fritz.vision.FritzVisionImage;
 import ai.fritz.vision.FritzVisionOrientation;
@@ -56,23 +58,7 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
     public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fritz.configure(this, "e5196d42e8744211a48caada96b4a649");
-        setContentView(R.layout.activity_splash);
-        /*
-        Thread background = new Thread() {
-            public void run() {
-                try {
-                    // Thread will sleep for 5 seconds
-                    sleep(5 * 1000);
-                    setContentView(R.layout.activity_main);
-                    //Remove activity
-                    finish();
-                } catch (Exception e) {
-                }
-            }
-        };
-        // start thread
-        background.start();
-        */
+
         // The code below loads a custom trained pose estimation model and creates a predictor that will be used to identify poses in live video.
         // Custom pose estimation models can be trained with the Fritz AI platform. To use a pre-trained pose estimation model,
         // see the FritzAIStudio demo in this repo.
@@ -102,17 +88,8 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
         snapshotButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!shouldSample.compareAndSet(true, false)) {
-                    return;
-                }
-
-                runInBackground(
-                        () -> {
-                            showSpinner();
-                            snapshotOverlay.postInvalidate();
-                            switchToSnapshotView();
-                            hideSpinner();
-                        });
+                Intent intent = new Intent(this, home_activity.class);
+                startActivity(intent);
             }
         });
         setCallback(canvas -> {

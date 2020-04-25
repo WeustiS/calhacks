@@ -129,11 +129,12 @@
 				android:layout_height="12.451904296875dp" />
 
 			<Button
-				android:id="@+id/button"
+				android:id="@+id/progress_button"
 				android:layout_width="403dp"
 				android:layout_height="789dp"
 				android:onClick="progressScreen"
-				android:visibility="invisible" />
+				android:visibility="invisible"
+				tools:visibility="invisible" />
 
 		</RelativeLayout>
 

@@ -12,6 +12,7 @@
         android:layout_height="80dp"
         android:layout_centerInParent="true"
         android:background="@drawable/round_button"
+        android:onClick="goHome"
         android:textColor="#fff" />
 
     <ProgressBar

@@ -29,8 +29,8 @@
 
             <View
                 android:id="@+id/_bg__home"
-                android:layout_width="375dp"
-                android:layout_height="812dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="0dp"
@@ -87,7 +87,7 @@
                 android:layout_marginTop="221dp"
                 android:background="@drawable/rectangle_1_shape" />
 
-            <ButtonView
+            <ImageButton
                 android:id="@+id/call_doctor"
                 android:layout_width="302dp"
                 android:layout_height="129dp"
@@ -161,6 +161,7 @@
                 android:layout_marginTop="388dp"
                 android:background="@drawable/rectangle_8_shape" />
 
+
             <View
                 android:id="@+id/rectangle_10"
                 android:layout_width="375dp"
@@ -169,7 +170,6 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="727dp"
                 android:background="@drawable/rectangle_10_shape" />
-
 
             <RelativeLayout
                 android:id="@+id/component_2___1"
