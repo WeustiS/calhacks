@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- splash colors -->
+
+	<color name="colorPrimary">#008577</color>
+	<color name="colorPrimaryDark">#00574B</color>
+	<color name="colorAccent">#D81B60</color>
+
+	<color name="_bg__splash_color">#000000</color>
+	<color name="ellipse_3_color">#ffffff</color>
+	<!-- home colors -->
+
+	<color name="_bg__home_color">#f8f8f8</color>
+	<color name="rectangle_11_color">#ffffff00</color>
+	<color name="hello_illini__how_are_you_today__color">#b5b5b5</color>
+	<color name="upcoming_call_color">#18326e</color>
+	<color name="rectangle_1_color">#7d9ff0</color>
+	<color name="rectangle_9_color">#5b87eb</color>
+	<color name="march_2__11_30_am_color">#ffffff</color>
+	<color name="rectangle_8_color">#ffffff</color>
+	<color name="home_color">#5b87eb</color>
+
+
+	<color name="_bg__facetime_calling_color">#000000</color>
+	<color name="ellipse_1_color">#ffffff</color>
+	<color name="dr__eustis_color">#ffffff</color>
+
+</resources>

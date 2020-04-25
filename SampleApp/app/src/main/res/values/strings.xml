@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- splash strings -->
+
+	<string name="app_name">Splash</string>
+	<string name="ek_img_content">ExportKit Image</string>
+
+	<!-- home strings -->
+
+	<string name="hello_illini__how_are_you_today__string">Hello Illini,\
+How are you today?</string>
+	<string name="upcoming_call_string">Upcoming Call</string>
+	<string name="call_a_doctor_now_string">Call a Doctor Now</string>
+	<string name="march_2__11_30_am_string">March 2, 11:30 AM</string>
+	<string name="this_saturday_string">This Saturday</string>
+	<string name="william_eustis_string">William Eustis</string>
+	<string name="psychicatrist_at_carle_string">Psychicatrist at Carle</string>
+	<string name="make_a_call_string">Make a call</string>
+	<string name="facetime_with_currently_available_doctors_string">FaceTime with currently\
+available doctors</string>
+	<string name="home_string">Home</string>
+	<string name="history_string">History</string>
+	<string name="schedule_string">Schedule</string>
+	<string name="chat_string">Chat</string>
+	<string name="profile_string">Profile</string>
+
+	<!-- facetime_calling strings -->
+
+	<string name="dr__eustis_string">Dr. Eustis</string>
+	<string name="calling__string">Calling</string>
+
+</resources>

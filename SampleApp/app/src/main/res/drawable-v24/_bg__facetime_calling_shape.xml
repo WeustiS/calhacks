@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _bg__facetime_calling from your PSD file. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+	android:shape="rectangle" >
+	<solid android:color="@color/_bg__facetime_calling_color" />
+	<gradient android:angle="270" android:type="linear" android:startColor="#ff7d9ff0" android:endColor="#ff4460d8" />
+</shape>
+
