@@ -1,0 +1,145 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent" android:layout_height="wrap_content" >
+	<!-- 
+	/*
+	 *	This content is generated from the API File Info.
+	 *	(Alt+Shift+Ctrl+I).
+	 *
+	 *	@desc 		
+	 *	@file 		facetime_calling
+	 *	@date 		0
+	 *	@title 		Facetime_calling
+	 *	@author 	
+	 *	@keywords 	
+	 *	@generator 	Export Kit v1.2.9.xd
+	 *
+	 */
+	-->
+	<ScrollView android:id="@+id/facetime_calling" 
+		android:layout_width="wrap_content" 
+		android:layout_height="match_parent" >
+
+		<RelativeLayout android:id="@+id/content_container" 
+			android:layout_width="wrap_content" 
+			android:layout_height="812dp" >
+
+			<View android:id="@+id/_bg__facetime_calling"
+				android:background="@drawable/_bg__facetime_calling_shape"
+				 android:layout_marginLeft="0dp"
+				 android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp"
+				android:layout_width="375dp"
+				android:layout_height="812dp" />
+
+
+			<RelativeLayout android:id="@+id/group_1"
+				android:layout_marginTop="196dp"
+				android:layout_marginStart="103dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+				<View android:id="@+id/ellipse_1"
+					android:background="@drawable/ellipse_1_shape"
+					 android:layout_marginLeft="0dp"
+					 android:layout_marginStart="0dp"
+					android:layout_marginTop="0dp"
+					android:layout_width="170dp"
+					android:layout_height="170dp" />
+
+				<ImageView android:id="@+id/_0"
+					android:src="@drawable/_0"
+					android:contentDescription="_0"
+					 android:layout_marginLeft="6dp"
+					 android:layout_marginStart="6dp"
+					android:layout_marginTop="6dp"
+					android:layout_width="158dp"
+					android:layout_height="158dp" />
+
+			</RelativeLayout>
+
+			<TextView android:id="@+id/dr__eustis"
+				android:fontFamily="Montserrat"
+				android:textSize="25sp"
+				android:textColor="@color/dr__eustis_color"
+				android:layout_marginLeft="126dp"
+				android:layout_marginTop="393dp"
+				android:layout_width="129dp"
+				android:layout_height="35dp"
+				android:text="@string/dr__eustis_string"
+				 />
+
+			<TextView android:id="@+id/calling_"
+				android:fontFamily="Montserrat"
+				android:textSize="16sp"
+				android:textColor="@color/dr__eustis_color"
+				android:layout_marginLeft="153dp"
+				android:layout_marginTop="429dp"
+				android:layout_width="74dp"
+				android:layout_height="22dp"
+				android:text="@string/calling__string"
+				 />
+
+
+			<RelativeLayout android:id="@+id/component_3___2"
+				android:layout_marginTop="34dp"
+				android:layout_marginStart="16dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="16dp">
+
+
+			</RelativeLayout>
+
+			<TextView android:id="@+id/home"
+				android:fontFamily="Montserrat"
+				android:textSize="14sp"
+				android:textColor="@color/dr__eustis_color"
+				android:layout_marginLeft="30dp"
+				android:layout_marginTop="30dp"
+				android:layout_width="48dp"
+				android:layout_height="21dp"
+				android:text="@string/home_string"
+				 />
+
+
+			<RelativeLayout android:id="@+id/group_10"
+				android:layout_marginTop="568dp"
+				android:layout_marginStart="160dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="160dp">
+
+
+				<RelativeLayout android:id="@+id/component_4___2"
+					android:layout_marginTop="0dp"
+					android:layout_marginStart="0dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="0dp">
+
+					<View android:id="@+id/ellipse_2"
+						android:background="@drawable/ellipse_2_shape"
+						 android:layout_marginLeft="0dp"
+						 android:layout_marginStart="0dp"
+						android:layout_marginTop="0dp"
+						android:layout_width="55dp"
+						android:layout_height="55dp" />
+
+				</RelativeLayout>
+
+				<ImageView android:id="@+id/icon_awesome_phone_slash"
+					android:src="@drawable/icon_awesome_phone_slash"
+					android:contentDescription="icon_awesome_phone_slash"
+					 android:layout_marginLeft="13dp"
+					 android:layout_marginStart="13dp"
+					android:layout_marginTop="16dp"
+					android:layout_width="30dp"
+					android:layout_height="24.000366210938dp" />
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+
+	</ScrollView>
+</HorizontalScrollView>

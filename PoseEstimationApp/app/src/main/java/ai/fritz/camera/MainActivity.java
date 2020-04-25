@@ -11,16 +11,15 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
+
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import ai.fritz.core.Fritz;
 import ai.fritz.poseestimationdemo.R;
 import ai.fritz.vision.FritzVision;
 import ai.fritz.vision.FritzVisionImage;
-import ai.fritz.vision.FritzVisionModels;
 import ai.fritz.vision.FritzVisionOrientation;
 import ai.fritz.vision.ImageOrientation;
-import ai.fritz.vision.ModelVariant;
 import ai.fritz.vision.poseestimation.FritzVisionPosePredictor;
 import ai.fritz.vision.poseestimation.FritzVisionPoseResult;
 import ai.fritz.vision.poseestimation.HumanSkeleton;
@@ -57,12 +56,30 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
     public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fritz.configure(this, "e5196d42e8744211a48caada96b4a649");
+        setContentView(R.layout.activity_splash);
+        /*
+        Thread background = new Thread() {
+            public void run() {
+                try {
+                    // Thread will sleep for 5 seconds
+                    sleep(5 * 1000);
+                    setContentView(R.layout.activity_main);
+                    //Remove activity
+                    finish();
+                } catch (Exception e) {
+                }
+            }
+        };
+        // start thread
+        background.start();
+        */
         // The code below loads a custom trained pose estimation model and creates a predictor that will be used to identify poses in live video.
         // Custom pose estimation models can be trained with the Fritz AI platform. To use a pre-trained pose estimation model,
         // see the FritzAIStudio demo in this repo.
         PoseOnDeviceModel poseEstimationOnDeviceModel = PoseOnDeviceModel.buildFromModelConfigFile("pose_recording_model.json", new HumanSkeleton());
         predictor = FritzVision.PoseEstimation.getPredictor(poseEstimationOnDeviceModel);
     }
+
 
     @Override
     protected int getLayoutId() {
