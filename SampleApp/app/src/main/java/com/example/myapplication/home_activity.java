@@ -18,11 +18,13 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ImageView;
 
@@ -53,7 +55,7 @@ public class home_activity extends Activity {
 	private TextView facetime_with_currently_available_doctors;
 	private ImageView polygon_1;
 	private ImageView icon_ionic_md_home;
-	private TextView home;
+	private ScrollView home;
 	private ImageView icon_awesome_history;
 	private TextView history;
 	private ImageView path_5;
@@ -99,7 +101,7 @@ public class home_activity extends Activity {
 		facetime_with_currently_available_doctors = (TextView) findViewById(R.id.facetime_with_currently_available_doctors);
 		//polygon_1 = (ImageView) findViewById(R.id.polygon_1);
 		icon_ionic_md_home = (ImageView) findViewById(R.id.icon_ionic_md_home);
-		home = (TextView) findViewById(R.id.home);
+		home = (ScrollView) findViewById(R.id.home);
 		icon_awesome_history = (ImageView) findViewById(R.id.icon_awesome_history);
 		//history = (TextView) findViewById(R.id.history);
 		path_5 = (ImageView) findViewById(R.id.path_5);
@@ -111,14 +113,23 @@ public class home_activity extends Activity {
 		//chat = (TextView) findViewById(R.id.chat);
 		icon_material_person = (ImageView) findViewById(R.id.icon_material_person);
 		//profile = (TextView) findViewById(R.id.profile);
-	
-		
+
+
 		//custom code goes here
+
+		call_doctor.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				makeCall();
+			}
+		});
 
 
 	}
 
-	public void makeCall(View view) {
+	public void makeCall() {
+		Intent intent = new Intent (this, facetime_calling_activity.class);
+		startActivity (intent);
 
 	}
 }

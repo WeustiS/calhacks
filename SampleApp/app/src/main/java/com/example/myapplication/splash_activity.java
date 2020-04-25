@@ -18,6 +18,7 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -61,8 +62,7 @@ public class splash_activity extends Activity {
 		ellipse_14 = (View) findViewById(R.id.ellipse_14);
 	
 		
-		//custom code goes here
-	
+		startActivity(new Intent(this, home_activity.class));
 	}
 }
 	

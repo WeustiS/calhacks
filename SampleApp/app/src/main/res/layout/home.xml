@@ -87,7 +87,7 @@
                 android:layout_marginTop="221dp"
                 android:background="@drawable/rectangle_1_shape" />
 
-            <ButtonView
+            <ImageButton
                 android:id="@+id/call_doctor"
                 android:layout_width="302dp"
                 android:layout_height="129dp"
