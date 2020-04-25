@@ -128,14 +128,17 @@
 
 				</RelativeLayout>
 
-				<ImageView android:id="@+id/icon_awesome_phone_slash"
+				<ImageButton android:id="@+id/icon_awesome_phone_slash"
 					android:src="@drawable/icon_awesome_phone_slash"
 					android:contentDescription="icon_awesome_phone_slash"
 					 android:layout_marginLeft="13dp"
 					 android:layout_marginStart="13dp"
 					android:layout_marginTop="16dp"
 					android:layout_width="30dp"
-					android:layout_height="24.000366210938dp" />
+					android:layout_height="24.000366210938dp"
+					android:onClick = "goHome"
+
+					/>
 
 			</RelativeLayout>
 
