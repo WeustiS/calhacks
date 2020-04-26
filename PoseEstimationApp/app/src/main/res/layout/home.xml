@@ -1,7 +1,8 @@
 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <!--
     /*
      *	This content is generated from the API File Info.
@@ -346,6 +347,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
                     android:layout_marginLeft="0dp"
+<<<<<<< Updated upstream
                     android:layout_marginTop="0dp">
 
                     <ImageView
@@ -360,6 +362,9 @@
 
 
                 </RelativeLayout>
+=======
+                    android:layout_marginTop="0dp" />
+>>>>>>> Stashed changes
 
 
                 <RelativeLayout
@@ -414,9 +419,15 @@
 
                         <ImageView
                             android:id="@+id/path_5"
+<<<<<<< Updated upstream
                             android:layout_width="21.666687011719dp"
                             android:layout_height="17.75dp"
                             android:layout_marginStart="15dp"
+=======
+                            android:layout_width="match_parent"
+                            android:layout_height="14dp"
+                            android:layout_marginStart="0dp"
+>>>>>>> Stashed changes
                             android:layout_marginLeft="0dp"
                             android:layout_marginTop="2dp"
                             android:contentDescription="path_5"
@@ -550,4 +561,11 @@
         </RelativeLayout>
 
     </ScrollView>
+    <android.support.design.widget.BottomNavigationView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"
+        />
 </HorizontalScrollView>
+
