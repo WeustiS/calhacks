@@ -154,8 +154,8 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
         private Bitmap getOutputImage(ByteBuffer output){
             output.rewind();
 
-            int outputWidth = 448;
-            int outputHeight = 1024;
+            int outputWidth = 512;
+            int outputHeight = 800;
             Bitmap bitmap = Bitmap.createBitmap(outputWidth, outputHeight, Bitmap.Config.ARGB_8888);
             int [] pixels = new int[outputWidth * outputHeight];
             for (int i = 0; i < outputWidth * outputHeight; i++) {
@@ -217,13 +217,12 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
             public void run() {
                 ImageView testImage = findViewById(R.id.testImage);
                 Bitmap yuv_bitmap = visionImage.prepare(new Size(448, 1024)); // 1072, 1800
-              //  Bitmap output = Bitmap.createBitmap(1072, 1800, Bitmap.Config.ARGB_8888);
 
                 TensorImage tImage = new TensorImage(DataType.FLOAT32);
                 tImage.load(yuv_bitmap);
-                ByteBuffer a = ByteBuffer.allocate(5376*1024);
+                ByteBuffer a = ByteBuffer.allocate(448*1024*12);
                 interpreter.run(tImage.getBuffer(), a);
-                testImage.setImageBitmap(getOutputImage(tImage.getBuffer()));
+                testImage.setImageBitmap(yuv_bitmap);
 
             }
         });
