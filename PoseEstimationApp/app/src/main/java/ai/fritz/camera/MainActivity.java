@@ -12,6 +12,7 @@ import android.media.ImageReader;
 import android.os.Build;
 import android.os.Bundle;
 import android.renderscript.Element;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.util.Size;
@@ -27,7 +28,14 @@ import org.tensorflow.lite.support.image.ImageProcessor;
 import org.tensorflow.lite.support.image.TensorImage;
 import org.tensorflow.lite.support.image.ops.ResizeOp;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
+
 import android.media.Image.Plane;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.ml.common.modeldownload.FirebaseModelDownloadConditions;
+import com.google.firebase.ml.common.modeldownload.FirebaseModelManager;
+import com.google.firebase.ml.custom.FirebaseCustomRemoteModel;
 
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
@@ -76,7 +84,26 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+        FirebaseCustomRemoteModel remoteModel =
+                new FirebaseCustomRemoteModel.Builder("VideoCompressor").build();
+
+        FirebaseModelDownloadConditions conditions = new FirebaseModelDownloadConditions.Builder()
+                .requireWifi()
+                .build();
+        FirebaseModelManager.getInstance().download(remoteModel, conditions)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        // Success.
+                    }
+                });
+
+
+
+
         Fritz.configure(this, "e5196d42e8744211a48caada96b4a649");
 
         // The code below loads a custom trained pose estimation model and creates a predictor that will be used to identify poses in live video.
@@ -96,10 +123,12 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
     protected Size getDesiredPreviewFrameSize() {
         return DESIRED_PREVIEW_SIZE;
     }
-    private void goHome(){
+
+    private void goHome() {
         Intent intent = new Intent(this, ai.fritz.telepathActivities.home_activity.class);
         startActivity(intent);
     }
+
     @Override
     public void onPreviewSizeChosen(final Size previewSize, final Size cameraViewSize, final int rotation) {
         orientation = FritzVisionOrientation.getImageOrientationFromCamera(this, cameraId);
@@ -111,7 +140,7 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
         snapshotButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               goHome();
+                goHome();
             }
         });
         snapshotButton2 = findViewById(R.id.take_picture_btn2);
@@ -131,10 +160,9 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
         });
 
 
-
-
     }
-    public float[][][][] convert_yuv(Bitmap in){
+
+    public float[][][][] convert_yuv(Bitmap in) {
         int batchNum = 0;
         float[][][][] out = new float[1][1800][1072][3];
         for (int x = 0; x < 2160; x++) {
@@ -143,9 +171,9 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
                 // Normalize channel values to [-1.0, 1.0]. This requirement varies by
                 // model. For example, some models might require values to be normalized
                 // to the range [0.0, 1.0] instead.
-                out[batchNum][x][y][0] = (Color.red(pixel))/ 255.0f;
+                out[batchNum][x][y][0] = (Color.red(pixel)) / 255.0f;
                 out[batchNum][x][y][1] = (Color.green(pixel)) / 255.0f;
-                out[batchNum][x][y][2] = (Color.blue(pixel))/ 255.0f;
+                out[batchNum][x][y][2] = (Color.blue(pixel)) / 255.0f;
 
             }
         }
@@ -153,38 +181,39 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
         return out;
     }
 
-        private Bitmap getOutputImage(ByteBuffer output){
-            output.rewind();
+    private Bitmap getOutputImage(ByteBuffer output) {
+        output.rewind();
 
-            int outputWidth = 512;
-            int outputHeight = 800;
-            Bitmap bitmap = Bitmap.createBitmap(outputWidth, outputHeight, Bitmap.Config.ARGB_8888);
-            int [] pixels = new int[outputWidth * outputHeight];
-            for (int i = 0; i < outputWidth * outputHeight; i++) {
-                //val a = 0xFF;
-                //float a = (float) 0xFF;
+        int outputWidth = 512;
+        int outputHeight = 800;
+        Bitmap bitmap = Bitmap.createBitmap(outputWidth, outputHeight, Bitmap.Config.ARGB_8888);
+        int[] pixels = new int[outputWidth * outputHeight];
+        for (int i = 0; i < outputWidth * outputHeight; i++) {
+            //val a = 0xFF;
+            //float a = (float) 0xFF;
 
-                //val r: Float = output?.float!! * 255.0f;
-                //byte val = output.get();
-                float r = ((float) output.get()) * 255.0f;
-                //float r = ((float) output.get());
+            //val r: Float = output?.float!! * 255.0f;
+            //byte val = output.get();
+            float r = ((float) output.get()) * 255.0f;
+            //float r = ((float) output.get());
 
-                //val g: Float = output?.float!! * 255.0f;
-                float g = ((float) output.get()) * 255.0f;
-                //float g = ((float) output.get());
+            //val g: Float = output?.float!! * 255.0f;
+            float g = ((float) output.get()) * 255.0f;
+            //float g = ((float) output.get());
 
-                //val b: Float = output?.float!! * 255.0f;
-                float b = ((float) output.get()) * 255.0f;
-                //float b = ((float) output.get());
+            //val b: Float = output?.float!! * 255.0f;
+            float b = ((float) output.get()) * 255.0f;
+            //float b = ((float) output.get());
 
 
-                //pixels[i] = a shl 24 or (r.toInt() shl 16) or (g.toInt() shl 8) or b.toInt()
-                pixels[i] = (((int) r) << 16) | (((int) g) << 8) | ((int) b);
-            }
-            bitmap.setPixels(pixels, 0, outputWidth, 0, 0, outputWidth, outputHeight);
-
-            return bitmap;
+            //pixels[i] = a shl 24 or (r.toInt() shl 16) or (g.toInt() shl 8) or b.toInt()
+            pixels[i] = (((int) r) << 16) | (((int) g) << 8) | ((int) b);
         }
+        bitmap.setPixels(pixels, 0, outputWidth, 0, 0, outputWidth, outputHeight);
+
+        return bitmap;
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     public void onImageAvailable(final ImageReader reader) {
@@ -205,11 +234,19 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
         }
 
 
+<<<<<<< Updated upstream
         visionImage = FritzVisionImage.fromMediaImage(image, orientation);
 
       // input.order(ByteOrder.nativeOrder());
        // ByteBuffer output = ByteBuffer.allocateDirect(4* 1280 * 960*3);
        // output.order(ByteOrder.nativeOrder());
+=======
+        //visionImage = FritzVisionImage.fromMediaImage(image, orientation);
+        //image.close();
+        // input.order(ByteOrder.nativeOrder());
+        // ByteBuffer output = ByteBuffer.allocateDirect(4* 1280 * 960*3);
+        // output.order(ByteOrder.nativeOrder());
+>>>>>>> Stashed changes
         // Analysis code for every frame
         // Preprocess the image
 
@@ -223,15 +260,19 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
                 Bitmap copy = yuv_bitmap.copy(yuv_bitmap.getConfig(), true);
                 TensorImage tImage = new TensorImage(DataType.FLOAT32);
                 tImage.load(yuv_bitmap);
+<<<<<<< Updated upstream
 
                 ByteBuffer a = ByteBuffer.allocate(448*1024*12);
+=======
+                ByteBuffer a = ByteBuffer.allocate(448 * 1024 * 12);
+>>>>>>> Stashed changes
                 interpreter.run(tImage.getBuffer(), a);
                 testImage.setImageBitmap(yuv_bitmap);
 
             }
         });
 
-       // Bitmap yuv = visionImage.buildSourceBitmap();
+        // Bitmap yuv = visionImage.buildSourceBitmap();
 
 
         //interpreter.run(in, out);

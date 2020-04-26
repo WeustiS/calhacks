@@ -337,14 +337,15 @@
 							android:layout_width="14.335205078125dp"
 							android:layout_height="14.13623046875dp" />
 
-						<ImageView android:id="@+id/path_9"
+						<ImageButton android:id="@+id/path_9"
 							android:src="@drawable/path_9"
 							android:contentDescription="path_9"
 							 android:layout_marginLeft="0dp"
 							 android:layout_marginStart="0dp"
 							android:layout_marginTop="0dp"
 							android:layout_width="14.62890625dp"
-							android:layout_height="11.094482421875dp" />
+							android:layout_height="11.094482421875dp"
+							android:onClick="goChat"/>
 
 					</RelativeLayout>
 

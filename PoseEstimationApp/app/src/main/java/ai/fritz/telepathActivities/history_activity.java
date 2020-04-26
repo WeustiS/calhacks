@@ -108,7 +108,10 @@ public class history_activity extends Activity {
 		icon_ionic_ios_arrow_forward_ek1 = (ImageView) findViewById(R.id.icon_ionic_ios_arrow_forward_ek1);
 		icon_ionic_ios_arrow_forward_ek2 = (ImageView) findViewById(R.id.icon_ionic_ios_arrow_forward_ek2);
 		icon_ionic_ios_arrow_forward_ek3 = (ImageView) findViewById(R.id.icon_ionic_ios_arrow_forward_ek3);
-	
+
+
+
+
 		
 		//custom code goes here
 	

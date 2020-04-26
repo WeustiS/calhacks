@@ -43,7 +43,47 @@
             </intent-filter>
             -->
         </activity>
+        <activity
+            android:name="ai.fritz.telepathActivities.chat_activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"  >
+        </activity>
 
+        <activity
+            android:name="ai.fritz.telepathActivities.chat_expand_activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"  >
+        </activity>
+        <activity
+            android:name="ai.fritz.telepathActivities.facetime_calling_activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"  >
+        </activity>
+        <activity
+            android:name="ai.fritz.telepathActivities.history_activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"  >
+        </activity>
+        <activity
+            android:name="ai.fritz.telepathActivities.profile_activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"  >
+        </activity>
+        <activity
+            android:name="ai.fritz.telepathActivities.schedule_activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"  >
+        </activity>
+        <activity
+            android:name="ai.fritz.telepathActivities.schedule_make_appointments_activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"  >
+        </activity>
+        <activity
+            android:name="ai.fritz.telepathActivities.schedule_confirmation_activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"  >
+        </activity>
         <activity android:name="ai.fritz.camera.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

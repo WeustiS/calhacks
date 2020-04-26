@@ -34,7 +34,7 @@ package ai.fritz.telepathActivities;
         private TextView hello_illini__how_are_you_today_;
         private TextView upcoming_call;
         private TextView call_a_doctor_now;
-        private View rectangle_1;
+        private ImageButton appointments;
         private ImageButton call_doctor;
         private TextView march_2__11_30_am;
         private TextView this_saturday;
@@ -60,8 +60,8 @@ package ai.fritz.telepathActivities;
         private ImageView path_6;
         private ImageView path_7;
         private TextView schedule;
-        private ImageView path_8;
-        private ImageView path_9;
+        private ImageButton chat_icon;// = (ImageButton) findViewById(R.id.path_8);
+        private ImageView path_9;// = (ImageButton) findViewById(R.id.path_9);
         private TextView chat;
         private ImageView icon_material_person;
         private TextView profile;
@@ -78,9 +78,12 @@ package ai.fritz.telepathActivities;
             hello_illini__how_are_you_today_ = (TextView) findViewById(R.id.hello_illini__how_are_you_today_);
             upcoming_call = (TextView) findViewById(R.id.upcoming_call);
             call_a_doctor_now = (TextView) findViewById(R.id.call_a_doctor_now);
-            rectangle_1 = (View) findViewById(R.id.rectangle_1);
+
+            appointments = (ImageButton) findViewById(R.id.appointment);
 
             call_doctor =  (ImageButton) findViewById(R.id.call_doctor); // Call a doctor button
+
+            chat_icon = (ImageButton) findViewById(R.id.path_8);
 
             march_2__11_30_am = (TextView) findViewById(R.id.march_2__11_30_am);
             this_saturday = (TextView) findViewById(R.id.this_saturday);
@@ -97,23 +100,27 @@ package ai.fritz.telepathActivities;
             path_4 = (ImageView) findViewById(R.id.path_4);
             make_a_call = (TextView) findViewById(R.id.make_a_call);
             facetime_with_currently_available_doctors = (TextView) findViewById(R.id.facetime_with_currently_available_doctors);
-            //polygon_1 = (ImageView) findViewById(R.id.polygon_1);
-            //icon_ionic_md_home = (ImageView) findViewById(R.id.icon_ionic_md_home);
+            polygon_1 = (ImageView) findViewById(R.id.polygon_1);
+            icon_ionic_md_home = (ImageView) findViewById(R.id.icon_ionic_md_home);
             home = (ScrollView) findViewById(R.id.home);
-            icon_awesome_history = (ImageView) findViewById(R.id.icon_awesome_history);
-            //history = (TextView) findViewById(R.id.history);
+            icon_awesome_history = (ImageButton) findViewById(R.id.icon_awesome_history);
+            history = (TextView) findViewById(R.id.history);
             path_5 = (ImageView) findViewById(R.id.path_5);
             path_6 = (ImageView) findViewById(R.id.path_6);
             path_7 = (ImageView) findViewById(R.id.path_7);
-            //schedule = (TextView) findViewById(R.id.schedule);
-            path_8 = (ImageView) findViewById(R.id.path_8);
-            path_9 = (ImageView) findViewById(R.id.path_9);
-            //chat = (TextView) findViewById(R.id.chat);
+            schedule = (TextView) findViewById(R.id.schedule);
+            chat = (TextView) findViewById(R.id.chat);
             icon_material_person = (ImageView) findViewById(R.id.icon_material_person);
-            //profile = (TextView) findViewById(R.id.profile);
+            profile = (TextView) findViewById(R.id.profile);
 
 
             //custom code goes here
+            path_1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goCalendar();
+                }
+            });
 
             call_doctor.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -122,6 +129,32 @@ package ai.fritz.telepathActivities;
                 }
             });
 
+            icon_awesome_history.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goHistory();
+                }
+            });
+
+            /*chat_icon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goChat();
+                }
+            });*/
+            icon_material_person.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goProfile();
+                }
+            });
+
+            appointments.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    goCalendar();
+                }
+            });
 
         }
 
@@ -130,6 +163,23 @@ package ai.fritz.telepathActivities;
             startActivity (intent);
 
         }
+        public void goCalendar() {
+            Intent intent = new Intent (this, ai.fritz.telepathActivities.schedule_activity.class);
+            startActivity (intent);
+        }
+        public void goChat () {
+            Intent intent = new Intent (this, ai.fritz.telepathActivities.chat_activity.class);
+            startActivity (intent);
+        }
+        public void goHistory () {
+            Intent intent = new Intent (this, ai.fritz.telepathActivities.history_activity.class);
+            startActivity (intent);
+        }
+        public void goProfile () {
+            Intent intent = new Intent (this, ai.fritz.telepathActivities.profile_activity.class);
+            startActivity (intent);
+        }
+
     }
 	
 	
