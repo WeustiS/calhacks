@@ -1,0 +1,226 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent" android:layout_height="wrap_content" >
+	<!-- 
+	/*
+	 *	This content is generated from the API File Info.
+	 *	(Alt+Shift+Ctrl+I).
+	 *
+	 *	@desc 		
+	 *	@file 		schedule_confirmation
+	 *	@date 		0
+	 *	@title 		Schedule_confirmation
+	 *	@author 	
+	 *	@keywords 	
+	 *	@generator 	Export Kit v1.2.9.xd
+	 *
+	 */
+	-->
+	<ScrollView android:id="@+id/schedule_confirmation" 
+		android:layout_width="wrap_content" 
+		android:layout_height="match_parent" >
+
+		<RelativeLayout android:id="@+id/content_container" 
+			android:layout_width="wrap_content" 
+			android:layout_height="860dp" >
+
+			<View android:id="@+id/_bg__schedule_confirmation"
+				android:background="@drawable/_bg__schedule_confirmation_shape"
+				 android:layout_marginLeft="0dp"
+				 android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp"
+				android:layout_width="430dp"
+				android:layout_height="860dp" />
+
+			<View
+				android:id="@+id/rectangle_57"
+				android:layout_width="430dp"
+				android:layout_height="860dp"
+				android:layout_marginStart="0dp"
+				android:layout_marginLeft="0dp"
+				android:layout_marginTop="0dp"
+				android:alpha="0.59876000881195"
+				android:background="@drawable/rectangle_57_shape" />
+
+			<View android:id="@+id/rectangle_1"
+				android:background="@drawable/rectangle_1_shape"
+				 android:layout_marginLeft="37dp"
+				 android:layout_marginStart="37dp"
+				android:layout_marginTop="214.60888671875dp"
+				android:layout_width="357dp"
+				android:layout_height="275dp" />
+
+
+			<RelativeLayout android:id="@+id/group_61"
+				android:layout_marginTop="242.22375488281dp"
+				android:layout_marginStart="90.719970703125dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				>
+
+
+				<RelativeLayout android:id="@+id/group_60"
+					android:layout_marginTop="0dp"
+					android:layout_marginStart="0dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					>
+
+
+					<RelativeLayout android:id="@+id/group_31"
+						android:layout_marginTop="0dp"
+						android:layout_marginStart="0dp"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						>
+
+						<ImageView android:id="@+id/path_24"
+							android:src="@drawable/path_24"
+							android:contentDescription="path_24"
+							 android:layout_marginLeft="0dp"
+							 android:layout_marginStart="0dp"
+							android:layout_marginTop="0dp"
+							android:layout_width="268dp"
+							android:layout_height="103dp" />
+
+
+						<RelativeLayout android:id="@+id/component_2___16"
+							android:layout_marginTop="13dp"
+							android:layout_marginStart="14dp"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							>
+
+							<View android:id="@+id/ellipse_1"
+								android:background="@drawable/ellipse_1_shape"
+								 android:layout_marginLeft="0dp"
+								 android:layout_marginStart="0dp"
+								android:layout_marginTop="0dp"
+								android:layout_width="60dp"
+								android:layout_height="60dp" />
+
+							<ImageView android:id="@+id/_0"
+								android:src="@drawable/_0"
+								android:contentDescription="_0"
+								 android:layout_marginLeft="2dp"
+								 android:layout_marginStart="2dp"
+								android:layout_marginTop="2dp"
+								android:layout_width="56dp"
+								android:layout_height="56dp" />
+
+						</RelativeLayout>
+
+
+						<RelativeLayout android:id="@+id/group_2"
+							android:layout_marginTop="24dp"
+							android:layout_marginStart="87dp"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							>
+
+							<TextView android:id="@+id/william_eustis"
+								android:fontFamily="Montserrat"
+								android:textSize="16sp"
+								android:textColor="@color/william_eustis_color"
+								android:layout_marginLeft="0dp"
+								android:layout_marginTop="0dp"
+								android:layout_width="122dp"
+								android:layout_height="22dp"
+								android:text="@string/william_eustis_string"
+								 />
+
+							<TextView android:id="@+id/psychicatrist_at_carle"
+								android:fontFamily="Montserrat"
+								android:textSize="14sp"
+								android:textColor="@color/william_eustis_color"
+								android:layout_marginLeft="0dp"
+								android:layout_marginTop="20dp"
+								android:layout_width="149dp"
+								android:layout_height="21dp"
+								android:text="@string/psychicatrist_at_carle_string"
+								 />
+
+						</RelativeLayout>
+
+					</RelativeLayout>
+
+				</RelativeLayout>
+
+
+				<RelativeLayout android:id="@+id/group_59"
+					android:layout_marginTop="102dp"
+					android:layout_marginStart="67dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					>
+
+					<TextView android:id="@+id/march_3rd__2020__11_00_am"
+						android:fontFamily="Montserrat"
+						android:layout_gravity="center_horizontal|center"
+						android:gravity="center"
+						android:textSize="14sp"
+						android:textColor="@color/william_eustis_color"
+						android:layout_marginLeft="0dp"
+						android:layout_marginTop="0dp"
+						android:layout_width="121dp"
+						android:layout_height="39dp"
+						android:text="@string/march_3rd__2020__11_00_am_string"
+						 />
+
+				</RelativeLayout>
+
+
+				<RelativeLayout android:id="@+id/group_58"
+					android:layout_marginTop="155dp"
+					android:layout_marginStart="17dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					>
+
+
+					<RelativeLayout android:id="@+id/group_57"
+						android:layout_marginTop="0dp"
+						android:layout_marginStart="0dp"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						>
+
+						<View android:id="@+id/rectangle_15"
+							android:background="@drawable/rectangle_15_shape"
+							 android:layout_marginLeft="0dp"
+							 android:layout_marginStart="0dp"
+							android:layout_marginTop="0dp"
+							android:layout_width="215dp"
+							android:layout_height="43dp" />
+
+						<TextView android:id="@+id/make_an_appointment"
+							android:fontFamily="Montserrat"
+							android:textSize="16sp"
+							android:textColor="@color/make_an_appointment_color"
+							android:layout_marginLeft="15dp"
+							android:layout_marginTop="12dp"
+							android:layout_width="191dp"
+							android:layout_height="22dp"
+							android:text="@string/make_an_appointment_string"
+							 />
+
+					</RelativeLayout>
+
+					<TextView android:id="@+id/cancel"
+						android:fontFamily="Montserrat"
+						android:textSize="14sp"
+						android:textColor="@color/william_eustis_color"
+						android:layout_marginLeft="84dp"
+						android:layout_marginTop="49dp"
+						android:layout_width="53dp"
+						android:layout_height="21dp"
+						android:text="@string/cancel_string"
+						 />
+
+				</RelativeLayout>
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+
+	</ScrollView>
+</HorizontalScrollView>

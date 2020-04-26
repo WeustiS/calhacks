@@ -33,4 +33,114 @@ available doctors</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- Chat Strings -->
+
+    <string name="chat_ek1_string">Chat</string>
+    <string name="search_string">Search</string>
+    <string name="lorem_ipsum_dolor_sit_amet__consetetur_sadipscing_elitr_string">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</string>
+    <string name="dr__eustis_ek1_string">Dr. Eustis</string>
+    <string name="lorem_ipsum_dolor_sit_amet__consetetur_sadipscing_elitr_ek1_string">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</string>
+    <string name="dr__eustis_ek2_string">Dr. Eustis</string>
+    <string name="lorem_ipsum_dolor_sit_amet__consetetur_sadipscing_elitr_ek2_string">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</string>
+
+    <!-- schedule_confirmation strings -->
+
+    <string name="march_3rd__2020__11_00_am_string">March 3rd, 2020 \
+11:00 AM</string>
+    <string name="make_an_appointment_string">Make an appointment</string>
+    <string name="cancel_string">Cancel</string>
+
+    <!-- profile strings -->
+
+    <string name="profile_ek1_string">Profile</string>
+    <string name="first_name_string">First Name</string>
+    <string name="last_name_string">Last Name</string>
+    <string name="phone_string">Phone</string>
+    <string name="email_string">Email</string>
+    <string name="william_string">William</string>
+    <string name="eustis_string">Eustis</string>
+    <string name="__123__123_1234_string">(123) 123-1234</string>
+    <string name="hackillinois_illinois_edu_string">hackillinois@illinois.edu</string>
+    <string name="save_string">Save</string>
+
+    <string name="lorem_ipsum_dolor_sit_amet__consetetur_sadipscing_elitr__sed_diam_nonumy_eirmod_tempor_invidunt_ut_string">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</string>
+    <string name="lorem_ipsum_dolor_sit_amet__consetetur_sadipscing_elitr__sed_diam_nonumy_eirmod_tempor_invidunt_ut_ek1_string">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</string>
+    <string name="lorem_ipsum_dolor_sit_amet__consetetur_sadipscing_elitr__sed_diam_nonumy_eirmod_tempor_invidunt_ut_ek2_string">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</string>
+    <string name="lorem_ipsum_dolor_sit_amet__consetetur_sadipscing_elitr__sed_diam_nonumy_eirmod_tempor_invidunt_ut_ek3_string">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</string>
+    <string name="enter_text_string">Enter Text</string>
+
+
+
+    <string name="schedule_ek1_string">Schedule</string>
+    <string name="home_ek1_string">Home</string>
+    <string name="history_ek1_string">History</string>
+    <string name="schedule_ek2_string">Schedule</string>
+
+    <string name="march_8__2_40_pm_string">March 8, 2:40 PM</string>
+    <string name="tomorrow_string">Tomorrow</string>
+    <string name="william_eustis_ek1_string">William Eustis</string>
+    <string name="psychicatrist_at_carle_ek1_string">Psychicatrist at Carle</string>
+    <string name="make_appointments_string">Make appointments</string>
+    <string name="lorem_ipsum_dolor_sit_dolor_sit_dolor_sit_string">Lorem ipsum dolor sit\dolor sit dolor sit</string>
+
+
+    <string name="dr__wang_string">Dr. Wang</string>
+    <string name="dr__lenenfeld_string">Dr. Lenenfeld</string>
+    <string name="dr__alqadi_string">Dr. Alqadi</string>
+    <string name="_29_jan_2020_11_20_pm_string">29 JAN 2020 11:20 PM</string>
+    <string name="_29_jan_2020_11_20_pm_ek1_string">29 JAN 2020 11:20 PM</string>
+    <string name="_29_jan_2020_11_20_pm_ek2_string">29 JAN 2020 11:20 PM</string>
+    <string name="_29_jan_2020_11_20_pm_ek3_string">29 JAN 2020 11:20 PM</string>
+
+
+    <string name="_11_00_string">11:00</string>
+    <string name="_14_00_string">14:00</string>
+    <string name="_17_00_string">17:00</string>
+    <string name="_18_00_string">18:00</string>
+    <string name="_19_00_string">19:00</string>
+    <string name="_20_00_string">20:00</string>
+    <string name="alyssa_lenenfeld_string">Alyssa Lenenfeld</string>
+
+    <string name="march_string">March</string>
+    <string name="march_3__2020_string">March 3, 2020</string>
+    <string name="_1_string">1</string>
+    <string name="_8_string">8</string>
+    <string name="_15_string">15</string>
+    <string name="_22_string">22</string>
+    <string name="_29_string">29</string>
+    <string name="_2_string">2</string>
+    <string name="_9_string">9</string>
+    <string name="_16_string">16</string>
+    <string name="_23_string">23</string>
+    <string name="_30_string">30</string>
+    <string name="_10_string">10</string>
+    <string name="_17_string">17</string>
+    <string name="_24_string">24</string>
+    <string name="_31_string">31</string>
+    <string name="_4_string">4</string>
+    <string name="_11_string">11</string>
+    <string name="_18_string">18</string>
+    <string name="_25_string">25</string>
+    <string name="_5_string">5</string>
+    <string name="_12_string">12</string>
+    <string name="_19_string">19</string>
+    <string name="_26_string">26</string>
+    <string name="_6_string">6</string>
+    <string name="_13_string">13</string>
+    <string name="_20_string">20</string>
+    <string name="_27_string">27</string>
+    <string name="_7_string">7</string>
+    <string name="_14_string">14</string>
+    <string name="_21_string">21</string>
+    <string name="_28_string">28</string>
+    <string name="_3_string">3</string>
+    <string name="_11_00_ek1_string">11:00</string>
+    <string name="_14_00_ek1_string">14:00</string>
+    <string name="_17_00_ek1_string">17:00</string>
+    <string name="_18_00_ek1_string">18:00</string>
+    <string name="_19_00_ek1_string">19:00</string>
+    <string name="_20_00_ek1_string">20:00</string>
+
+
 </resources>

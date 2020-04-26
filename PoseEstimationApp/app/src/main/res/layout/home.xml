@@ -81,7 +81,7 @@
 
             <View
                 android:id="@+id/rectangle_1"
-                android:layout_width="355dp"
+                android:layout_width="334dp"
                 android:layout_height="252dp"
                 android:layout_marginStart="37dp"
                 android:layout_marginLeft="37dp"
@@ -90,7 +90,7 @@
 
             <ImageButton
                 android:id="@+id/call_doctor"
-                android:layout_width="355dp"
+                android:layout_width="334dp"
                 android:layout_height="129dp"
                 android:layout_marginStart="37dp"
                 android:layout_marginLeft="37dp"
@@ -155,7 +155,7 @@
 
             <View
                 android:id="@+id/rectangle_8"
-                android:layout_width="355dp"
+                android:layout_width="334dp"
                 android:layout_height="85dp"
                 android:layout_marginStart="37dp"
                 android:layout_marginLeft="37dp"

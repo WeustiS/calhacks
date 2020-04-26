@@ -24,4 +24,36 @@
     <color name="dr__eustis_color">#ffffff</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="_bg__chat_color">#f8f8f8</color>
+    <color name="rectangle_10_color">#ffffff</color>
+    <color name="chat_color">#7d9ff0</color>
+
+    <color name="_bg__schedule_confirmation_color">#f8f8f8</color>
+    <color name="rectangle_57_color">#000000</color>
+    <color name="william_eustis_color">#7d9ff0</color>
+    <color name="rectangle_15_color">#7d9ff0</color>
+    <color name="make_an_appointment_color">#ffffff</color>
+
+
+    <color name="_bg__profile_color">#f8f8f8</color>
+    <color name="profile_color">#7d9ff0</color>
+    <color name="ellipse_5_color">#7d9ff0</color>
+    <color name="save_color">#ffffff</color>
+
+    <color name="_bg__chat_expand_color">#f8f8f8</color>
+    <color name="rectangle_18_color">#7d9ff0</color>
+
+    <color name="_bg__schedule_make_appointments_color">#f8f8f8</color>
+    <color name="rectangle_23_color">#ffffff</color>
+    <color name="rectangle_40_color">#7d9ff0</color>
+    <color name="_11_00_color">#7d9ff0</color>
+    <color name="alyssa_lenenfeld_color">#ffffff</color>
+
+    <color name="_bg__schedule_color">#f8f8f8</color>
+    <color name="schedule_color">#7d9ff0</color>
+
+
+    <color name="_bg__history_color">#f8f8f8</color>
+    <color name="history_color">#7d9ff0</color>
+
 </resources>

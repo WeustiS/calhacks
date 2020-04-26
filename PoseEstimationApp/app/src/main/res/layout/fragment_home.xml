@@ -17,15 +17,6 @@
             android:layout_width="wrap_content"
             android:layout_height="812dp" >
 
-            <View
-                android:id="@+id/_bg__home"
-                android:layout_width="wrap_content"
-                android:layout_height="812dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/_bg__home_shape" />
-
 
             <TextView android:id="@+id/hello_illini__how_are_you_today_"
                 android:fontFamily="Montserrat"
@@ -209,6 +200,15 @@
                     android:layout_height="21dp"
                     android:text="@string/psychicatrist_at_carle_string"
                     />
+
+                <View
+                    android:id="@+id/_bg__home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="812dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/_bg__home_shape" />
 
             </RelativeLayout>
 

@@ -28,8 +28,8 @@
 				 android:layout_marginLeft="0dp"
 				 android:layout_marginStart="0dp"
 				android:layout_marginTop="0dp"
-				android:layout_width="412dp"
-				android:layout_height="846dp" />
+				android:layout_width="432dp"
+				android:layout_height="864dp" />
 
 			<ImageView android:id="@+id/path_18"
 				android:src="@drawable/path_18"
