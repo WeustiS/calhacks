@@ -39,7 +39,7 @@
 
             <View
                 android:id="@+id/rectangle_11"
-                android:layout_width="375dp"
+                android:layout_width="433dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
@@ -48,7 +48,7 @@
 
             <TextView
                 android:id="@+id/hello_illini__how_are_you_today_"
-                android:layout_width="261dp"
+                android:layout_width="355dp"
                 android:layout_height="65dp"
                 android:layout_marginLeft="36dp"
                 android:layout_marginTop="83dp"
@@ -81,7 +81,7 @@
 
             <View
                 android:id="@+id/rectangle_1"
-                android:layout_width="302dp"
+                android:layout_width="355dp"
                 android:layout_height="252dp"
                 android:layout_marginStart="37dp"
                 android:layout_marginLeft="37dp"
@@ -90,7 +90,7 @@
 
             <ImageButton
                 android:id="@+id/call_doctor"
-                android:layout_width="302dp"
+                android:layout_width="355dp"
                 android:layout_height="129dp"
                 android:layout_marginStart="37dp"
                 android:layout_marginLeft="37dp"
@@ -155,7 +155,7 @@
 
             <View
                 android:id="@+id/rectangle_8"
-                android:layout_width="302dp"
+                android:layout_width="355dp"
                 android:layout_height="85dp"
                 android:layout_marginStart="37dp"
                 android:layout_marginLeft="37dp"
@@ -165,7 +165,7 @@
 
             <View
                 android:id="@+id/rectangle_10"
-                android:layout_width="375dp"
+                android:layout_width="433dp"
                 android:layout_height="85dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
@@ -267,9 +267,9 @@
                     android:id="@+id/path_3"
                     android:layout_width="27.084350585938dp"
                     android:layout_height="32.4140625dp"
-                    android:layout_marginStart="13dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginLeft="13dp"
-                    android:layout_marginTop="0dp"
+                    android:layout_marginTop="-3dp"
                     android:contentDescription="path_3"
                     android:src="@drawable/path_3" />
 
@@ -277,9 +277,9 @@
                     android:id="@+id/path_4"
                     android:layout_width="38.587524414062dp"
                     android:layout_height="36dp"
-                    android:layout_marginStart="0dp"
+                    android:layout_marginStart="-8dp"
                     android:layout_marginLeft="0dp"
-                    android:layout_marginTop="0dp"
+                    android:layout_marginTop="-5dp"
                     android:contentDescription="path_4"
                     android:src="@drawable/path_4" />
 
@@ -333,7 +333,7 @@
 
             <RelativeLayout
                 android:id="@+id/component_1___2"
-                android:layout_width="wrap_content"
+                android:layout_width="344dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="37dp"
                 android:layout_marginLeft="37dp"
@@ -352,7 +352,7 @@
                         android:id="@+id/icon_ionic_md_home"
                         android:layout_width="21.666687011719dp"
                         android:layout_height="20dp"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="30dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="0dp"
                         android:contentDescription="icon_ionic_md_home"
@@ -374,7 +374,7 @@
                         android:id="@+id/icon_awesome_history"
                         android:layout_width="20.000061035156dp"
                         android:layout_height="20dp"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginStart="34dp"
                         android:layout_marginLeft="12dp"
                         android:layout_marginTop="0dp"
                         android:contentDescription="icon_awesome_history"
@@ -416,7 +416,7 @@
                             android:id="@+id/path_5"
                             android:layout_width="21.666687011719dp"
                             android:layout_height="17.75dp"
-                            android:layout_marginStart="0dp"
+                            android:layout_marginStart="15dp"
                             android:layout_marginLeft="0dp"
                             android:layout_marginTop="2dp"
                             android:contentDescription="path_5"
@@ -480,7 +480,7 @@
                             android:id="@+id/path_8"
                             android:layout_width="14.335205078125dp"
                             android:layout_height="14.13623046875dp"
-                            android:layout_marginStart="6dp"
+                            android:layout_marginStart="15dp"
                             android:layout_marginLeft="6dp"
                             android:layout_marginTop="6dp"
                             android:contentDescription="path_8"
@@ -490,7 +490,7 @@
                             android:id="@+id/path_9"
                             android:layout_width="14.62890625dp"
                             android:layout_height="11.094482421875dp"
-                            android:layout_marginStart="0dp"
+                            android:layout_marginStart="20dp"
                             android:layout_marginLeft="0dp"
                             android:layout_marginTop="0dp"
                             android:contentDescription="path_9"
@@ -525,7 +525,7 @@
                         android:id="@+id/icon_material_person"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_marginStart="10dp"
+                        android:layout_marginStart="30dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="0dp"
                         android:contentDescription="icon_material_person"
