@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
 import android.hardware.Camera;
 import android.media.Image;
 import android.media.ImageReader;
@@ -14,6 +15,7 @@ import android.renderscript.Element;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.util.Size;
+import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -203,23 +205,25 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
         }
 
 
-        //visionImage = FritzVisionImage.fromMediaImage(image, orientation);
-        //image.close();
+        visionImage = FritzVisionImage.fromMediaImage(image, orientation);
+
       // input.order(ByteOrder.nativeOrder());
        // ByteBuffer output = ByteBuffer.allocateDirect(4* 1280 * 960*3);
        // output.order(ByteOrder.nativeOrder());
         // Analysis code for every frame
         // Preprocess the image
-        visionImage = FritzVisionImage.fromMediaImage(image, orientation);
+
+
         runOnUiThread(new Runnable() {
 
             @Override
             public void run() {
                 ImageView testImage = findViewById(R.id.testImage);
-                Bitmap yuv_bitmap = visionImage.prepare(new Size(448, 1024)); // 1072, 1800
-
+                Bitmap yuv_bitmap = visionImage.prepare(new Size(512, 896)); // 1072, 1800
+                Bitmap copy = yuv_bitmap.copy(yuv_bitmap.getConfig(), true);
                 TensorImage tImage = new TensorImage(DataType.FLOAT32);
                 tImage.load(yuv_bitmap);
+
                 ByteBuffer a = ByteBuffer.allocate(448*1024*12);
                 interpreter.run(tImage.getBuffer(), a);
                 testImage.setImageBitmap(yuv_bitmap);
