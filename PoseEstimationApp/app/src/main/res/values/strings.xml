@@ -3,7 +3,7 @@
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <!-- splash strings -->
 
-    <string name="app_name">Splash</string>
+    <string name="app_name">TelePath</string>
     <string name="ek_img_content">ExportKit Image</string>
 
     <!-- home strings -->
