@@ -8,10 +8,19 @@
 
     <Button
         android:id="@+id/take_picture_btn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_centerInParent="true"
         android:background="@drawable/icon_awesome_phone_slash"
+        android:onClick="goHome"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/take_picture_btn2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_button"
         android:onClick="goHome"
         android:textColor="#fff" />
 

@@ -1,5 +1,5 @@
 {
-  "model_path": "file:///android_asset/PoseMobilenet353x25758Large1565627685.tflite",
+  "model_path": "file:///android_asset/converted_model.tflite",
   "pinned_version": 1,
   "model_version": 1,
   "model_id": "Your model id",

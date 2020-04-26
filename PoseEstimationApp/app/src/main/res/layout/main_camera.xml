@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,20 +9,33 @@
         android:id="@+id/preview_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ai.fritz.camera.AutoFitTextureView
-            android:id="@+id/texture"
+        <ImageView
+            android:id="@+id/testImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true" />
+            android:layout_alignParentTop="true"
+            />
+        <ai.fritz.camera.AutoFitTextureView
+            android:id="@+id/texture"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@android:mipmap/sym_def_app_icon"
+
+            />
+
+
 
         <ai.fritz.camera.OverlayView
             android:id="@+id/debug_overlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="-20dp" />
+            android:layout_marginTop="454dp" />
 
         <include layout="@layout/snapshot_button" />
+
     </RelativeLayout>
 
 </RelativeLayout>
