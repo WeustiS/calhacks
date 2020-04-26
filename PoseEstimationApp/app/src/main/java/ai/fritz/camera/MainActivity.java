@@ -19,6 +19,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+
+import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.image.ImageProcessor;
 import org.tensorflow.lite.support.image.TensorImage;
 import org.tensorflow.lite.support.image.ops.ResizeOp;
@@ -78,7 +80,7 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
         // The code below loads a custom trained pose estimation model and creates a predictor that will be used to identify poses in live video.
         // Custom pose estimation models can be trained with the Fritz AI platform. To use a pre-trained pose estimation model,
         // see the FritzAIStudio demo in this repo.
-        FritzOnDeviceModel onDeviceModel = new FritzOnDeviceModel("file:///android_asset/converted_model.tflite", "a418b017c4f546cf910e744278185a6e", 1);
+        FritzOnDeviceModel onDeviceModel = new FritzOnDeviceModel("file:///android_asset/converted_model_full.tflite", "a418b017c4f546cf910e744278185a6e", 1);
         interpreter = new FritzTFLiteInterpreter(onDeviceModel);
     }
 
@@ -148,14 +150,39 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
 
         return out;
     }
-    public float[][][][] call(float[][][][] input){
-        float[][][][] output = new float[1][2160][1080][3];
-        interpreter.getInterpreter().run(input, output);
-        input = null; // gc
-        return output;
 
-    }
+        private Bitmap getOutputImage(ByteBuffer output){
+            output.rewind();
 
+            int outputWidth = 448;
+            int outputHeight = 1024;
+            Bitmap bitmap = Bitmap.createBitmap(outputWidth, outputHeight, Bitmap.Config.RGB_565);
+            int [] pixels = new int[outputWidth * outputHeight];
+            for (int i = 0; i < outputWidth * outputHeight; i++) {
+                //val a = 0xFF;
+                //float a = (float) 0xFF;
+
+                //val r: Float = output?.float!! * 255.0f;
+                //byte val = output.get();
+                float r = ((float) output.get()) * 255.0f;
+                //float r = ((float) output.get());
+
+                //val g: Float = output?.float!! * 255.0f;
+                float g = ((float) output.get()) * 255.0f;
+                //float g = ((float) output.get());
+
+                //val b: Float = output?.float!! * 255.0f;
+                float b = ((float) output.get()) * 255.0f;
+                //float b = ((float) output.get());
+
+
+                //pixels[i] = a shl 24 or (r.toInt() shl 16) or (g.toInt() shl 8) or b.toInt()
+                pixels[i] = (((int) r) << 16) | (((int) g) << 8) | ((int) b);
+            }
+            bitmap.setPixels(pixels, 0, outputWidth, 0, 0, outputWidth, outputHeight);
+
+            return bitmap;
+        }
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     public void onImageAvailable(final ImageReader reader) {
@@ -189,10 +216,15 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
             @Override
             public void run() {
                 ImageView testImage = findViewById(R.id.testImage);
-                Bitmap yuv_bitmap = visionImage.prepare(new Size(1072, 1800));
-                Bitmap output = Bitmap.createBitmap(1072, 1800, Bitmap.Config.ARGB_8888);
-                //interpreter.getInterpreter().run(yuv_bitmap, output);
-                testImage.setImageBitmap(output);
+                Bitmap yuv_bitmap = visionImage.prepare(new Size(448, 1024)); // 1072, 1800
+              //  Bitmap output = Bitmap.createBitmap(1072, 1800, Bitmap.Config.ARGB_8888);
+
+                TensorImage tImage = new TensorImage(DataType.FLOAT32);
+                tImage.load(yuv_bitmap);
+                TensorBuffer resp = TensorBuffer.createFixedSize(new int[]{1, 448* 1024* 3}, DataType.FLOAT32);
+                ByteBuffer a = resp.getBuffer();
+                interpreter.getInterpreter().run(tImage.getBuffer(), a);
+                testImage.setImageBitmap(getOutputImage(tImage.getBuffer()));
 
             }
         });
