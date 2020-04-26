@@ -28,8 +28,8 @@
 				 android:layout_marginLeft="0dp"
 				 android:layout_marginStart="0dp"
 				android:layout_marginTop="0dp"
-				android:layout_width="500dp"
-				android:layout_height="812dp" />
+				android:layout_width="412dp"
+				android:layout_height="846dp" />
 
 			<ImageView android:id="@+id/path_18"
 				android:src="@drawable/path_18"
@@ -128,13 +128,7 @@
 				android:layout_width="12.451919555664dp"
 				android:layout_height="12.451904296875dp" />
 
-			<Button
-				android:id="@+id/progress_button"
-				android:layout_width="403dp"
-				android:layout_height="789dp"
-				android:onClick="progressScreen"
-				android:visibility="invisible"
-				tools:visibility="invisible" />
+
 
 		</RelativeLayout>
 

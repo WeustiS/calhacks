@@ -98,7 +98,7 @@ package ai.fritz.telepathActivities;
             make_a_call = (TextView) findViewById(R.id.make_a_call);
             facetime_with_currently_available_doctors = (TextView) findViewById(R.id.facetime_with_currently_available_doctors);
             //polygon_1 = (ImageView) findViewById(R.id.polygon_1);
-            icon_ionic_md_home = (ImageView) findViewById(R.id.icon_ionic_md_home);
+            //icon_ionic_md_home = (ImageView) findViewById(R.id.icon_ionic_md_home);
             home = (ScrollView) findViewById(R.id.home);
             icon_awesome_history = (ImageView) findViewById(R.id.icon_awesome_history);
             //history = (TextView) findViewById(R.id.history);
