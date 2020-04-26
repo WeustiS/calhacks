@@ -156,7 +156,7 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
 
             int outputWidth = 448;
             int outputHeight = 1024;
-            Bitmap bitmap = Bitmap.createBitmap(outputWidth, outputHeight, Bitmap.Config.RGB_565);
+            Bitmap bitmap = Bitmap.createBitmap(outputWidth, outputHeight, Bitmap.Config.ARGB_8888);
             int [] pixels = new int[outputWidth * outputHeight];
             for (int i = 0; i < outputWidth * outputHeight; i++) {
                 //val a = 0xFF;
@@ -221,9 +221,8 @@ public class MainActivity extends BaseCameraActivity implements ImageReader.OnIm
 
                 TensorImage tImage = new TensorImage(DataType.FLOAT32);
                 tImage.load(yuv_bitmap);
-                TensorBuffer resp = TensorBuffer.createFixedSize(new int[]{1, 448* 1024* 3}, DataType.FLOAT32);
-                ByteBuffer a = resp.getBuffer();
-                interpreter.getInterpreter().run(tImage.getBuffer(), a);
+                ByteBuffer a = ByteBuffer.allocate(5376*1024);
+                interpreter.run(tImage.getBuffer(), a);
                 testImage.setImageBitmap(getOutputImage(tImage.getBuffer()));
 
             }
